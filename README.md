@@ -31,19 +31,19 @@ This tool is intended for **educational and research purposes only**. It was cre
 - Clone this repository https://github.com/Devam0109/Keylogger.git
 - Run python script
 
-#### **3. Configure the Script
+#### **3. Configure the Script**
 You need to get a Bot Token and your Chat ID from Telegram.
 
 Create a Bot: Talk to @BotFather on Telegram, use the /newbot command, and follow the instructions. It will give you a unique Bot Token.
 
 Get your Chat ID: Find your new bot on Telegram and send it a message. Then, visit this URL in your browser (replace <YourBotToken> with your token): https://api.telegram.org/bot<YourBotToken>/getUpdates. Your Chat ID will be listed in the response.
 
-#### **4. Replace in code
+#### **4. Replace in code**
 Now, open key.py and replace the placeholder values with your credentials:
 
 Telegram bot token and chat ID
 BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN_HERE'
 CHAT_ID = 'YOUR_CHAT_ID_HERE'
 
-#### **5. Run the script
+#### **5. Run the script**
 python key.py
