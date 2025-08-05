@@ -41,8 +41,9 @@ Get your Chat ID: Find your new bot on Telegram and send it a message. Then, vis
 #### **4. Replace in code
 Now, open key.py and replace the placeholder values with your credentials:
 
-# Telegram bot token and chat ID
+Telegram bot token and chat ID
 BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN_HERE'
 CHAT_ID = 'YOUR_CHAT_ID_HERE'
 
-then execute the script.
+#### **5. Run the script
+python key.py
