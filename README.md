@@ -36,7 +36,38 @@ You need to get a Bot Token and your Chat ID from Telegram.
 
 Create a Bot: Talk to @BotFather on Telegram, use the /newbot command, and follow the instructions. It will give you a unique Bot Token.
 
-Get your Chat ID: Find your new bot on Telegram and send it a message. Then, visit this URL in your browser (replace <YourBotToken> with your token): https://api.telegram.org/bot<YourBotToken>/getUpdates. Your Chat ID will be listed in the response.
+Get your Chat ID: 
+
+Search and open our new Telegram bot
+Click Start or send a message
+Open this URL in a browser https://api.telegram.org/bot{our_bot_token}/getUpdates
+See we need to prefix our token with a word bot
+Eg: https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/getUpdates
+We will see a json like so
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 83xxxxx35,
+      "message": {
+        "message_id": 2643,
+        "from": {...},
+        "chat": {
+          "id": 21xxxxx38,
+          "first_name": "...",
+          "last_name": "...",
+          "username": "@username",
+          "type": "private"
+        },
+        "date": 1703062972,
+        "text": "/start"
+      }
+    }
+  ]
+}
+Check the value of result.0.message.chat.id, and here is our Chat ID: 21xxxxx38
+Let's try to send a message: https://api.telegram.org/bot63xxxxxx71:AAFoxxxxn0hwA-2TVSxxxNf4c/sendMessage?chat_id=21xxxxx38&text=test123
+When we set the bot token and chat id correctly, the message test123 should be arrived on our Telegram bot chat.
 
 #### **4. Replace in code**
 Now, open key.py and replace the placeholder values with your credentials:
